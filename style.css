@@ -245,3 +245,245 @@ body {
     display: inline-block; /* permite que a largura se ajuste ao conteúdo */
     max-width: 100%;        /* evita que ultrapasse a tela */
 }
+
+/* ===== Tablet: telas até 1024px ===== */
+@media (max-width: 1024px) {
+  .content {
+    width: 90%;
+    height: auto;
+    padding: 60px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .content__main {
+    gap: 48px;
+    padding: 60px;
+  }
+
+  .page__image {
+    width: 28%;
+    right: 0;
+    top: 60px;
+  }
+
+  .section__title {
+    font-size: 56px;
+    margin: 40px 0 48px 0;
+  }
+
+  .friends__container {
+    width: 380px;
+    font-size: 19px;
+    padding: 20px;
+  }
+
+  .form__input {
+    width: 420px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  #lista-amigos,
+  #lista-sorteio {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .section--results {
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== Smartphone: telas até 600px ===== */
+@media (max-width: 600px) {
+  /* Container principal passa a ser estático e fluido */
+  .content {
+    position: static;
+    transform: none;
+    width: 95%;
+    margin: 24px auto;
+    padding: 20px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .content__main {
+    padding: 18px;
+    gap: 24px;
+  }
+
+  /* Remove a imagem no smartphone para economizar espaço */
+  .page__image {
+    display: none;
+  }
+
+  /* Título menor e com quebra adequada */
+  .section__title {
+    font-size: 34px;
+    line-height: 1.05;
+    margin: 16px 0 24px 0;
+    word-break: break-word;
+  }
+
+  /* Form e inputs responsivos */
+  .form__input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    height: 48px;
+    padding: 10px 12px;
+  }
+
+  .form__buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+
+  /* Boxes de lista crescem lateralmente e ocupam largura disponível */
+  #lista-amigos,
+  #lista-sorteio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  /* Seção de resultados empilha verticalmente */
+  .section--results {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .friends__container {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .content__corner-rectangle {
+    display: none;
+  }
+
+  /* Evita elementos posicionados saírem da tela */
+  .background__detail {
+    display: none;
+  }
+}
+
+/* ===== Ajustes adicionais para permitir crescimento lateral controlado ===== */
+/* Garante que o box do sorteio expanda horizontalmente sem quebrar layout em telas maiores */
+.prizeDraw__container, .friends__container {
+  min-width: 240px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+/* Para o #lista-sorteio permitir crescer lateralmente conforme conteúdo,
+   mantendo limite máximo para não ultrapassar viewport */
+#lista-sorteio {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 200px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* Mantém #lista-amigos consistente com comportamento */
+#lista-amigos {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===== Corrige smartphones em modo horizontal ===== */
+@media screen and (max-device-width: 950px) and (orientation: landscape) {
+  .content {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 16px auto;
+    padding: 16px;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .content__main {
+    padding: 12px;
+    gap: 20px;
+  }
+
+  .section__title {
+    font-size: 28px;
+    margin: 12px 0 20px 0;
+    line-height: 1.1;
+  }
+
+  .form__input,
+  .button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form__buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  #lista-amigos,
+  #lista-sorteio {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    overflow-wrap: break-word;
+  }
+
+  .page__image,
+  .content__corner-rectangle,
+  .background__detail {
+    display: none;
+  }
+
+  .section--results {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .friends__container,
+  .prizeDraw__container {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }
+}
