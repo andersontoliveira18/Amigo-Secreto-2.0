@@ -1,0 +1,247 @@
+body {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+}
+
+.background__detail {
+  background-color: #000;
+  height: calc(100% - 389px);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 195px;
+  z-index: 0;
+}
+
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 700;
+  gap: 10px;
+  height: 52px;
+  justify-content: center;
+  line-height: normal;
+  padding: 16px 24px;
+  text-align: center;
+  width: 208px;
+}
+
+.content {
+  background-color: #000;
+  border: 1px solid #9c8806;
+  filter: drop-shadow(0px 0px 30px #9c8806);
+  height: 871px;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  z-index: 1;
+}
+
+.content__corner-rectangle {
+  background-color: #f4e000;
+  bottom: -15px;
+  clip-path: polygon(0% 100%, 0% 50%, 4% 0%, 100% 0%, 100% 50%, 96% 100%);
+  height: 33px;
+  position: absolute;
+  right: 498px;
+  width: 511px;
+  z-index: 3;
+}
+
+.content__main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: start;
+  padding: 100px;
+}
+
+.friends__container {
+  align-items: center;
+  border: 1px solid #9c8806;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  font-size: 21px;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 160%;
+  margin-top: 1rem;
+  padding: 24px;
+  width: 453px;
+}
+
+.friends__container > p {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.friends__title {
+  color: #9c8806;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter;
+  font-style: normal;
+}
+
+.form__buttons {
+ align-items: center;
+  display: flex;
+  gap: 36px;
+}
+
+.form__input {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #9c8806;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  height: 56px;
+  margin-bottom: 32px;
+  outline: none;
+  padding: 8px 16px;
+  width: 517px;
+}
+
+.form__input::placeholder {
+  color: #fff;
+  font-size: 21px;
+}
+
+.form__label {
+  color: #9c8806;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 16px;
+}
+
+.form__link {
+  color: #f4e000;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  text-decoration-line: underline;
+  display: table-row;
+  margin-top: 10px;
+}
+
+.page__image {
+  position: absolute;
+  right: 0;
+  top: 72px;
+  z-index: 2;
+  pointer-events: none;
+  width: 30%;
+}
+
+.prizeDraw__container {
+  color: #fff;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 700;
+  height: 199px;
+  line-height: 160%;
+  margin-top: 1rem;
+}
+
+.prizeDraw__title {
+  color: #f4e000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.primary {
+  background-color: #9c8806;
+  color: #fff;
+}
+
+.section--results {
+  align-items: start;
+  display: flex;
+  font-family: Inter;
+  font-style: normal;
+  gap: 48px;
+}
+
+.section__title {
+  color: #fff;
+  font-family: Chakra Petch;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80%;
+  margin: 60px 0 80px 0;
+}
+
+.section__title > span {
+  color: #9c8806;
+}
+
+.secondary {
+  background-color: #fff;
+  color: #9c8806;
+}
+
+.form__buttons {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: flex-start; /* Alinha à esquerda */
+  margin-left: 0; /* ou ajuste conforme o layout */
+}
+
+.form__button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lista-amigos,
+#lista-sorteio {
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    color: #fff;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+#lista-sorteio {
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    word-wrap: break-word;
+    display: inline-block; /* permite que a largura se ajuste ao conteúdo */
+    max-width: 100%;        /* evita que ultrapasse a tela */
+}
